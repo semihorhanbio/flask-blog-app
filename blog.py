@@ -2,9 +2,13 @@
 
 from flask import Flask, render_template, request, session, flash, redirect, url_for, g
 import sqlite3
+from os import urandom
 
 # configuration
 DATABASE = 'blog.db'
+USERNAME = 'admin'
+PASSWORD = 'admin'
+SECRET_KEY = urandom(24)
 
 app = Flask(__name__)
 
